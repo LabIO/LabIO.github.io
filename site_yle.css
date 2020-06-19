@@ -24,7 +24,7 @@ p, a { /* paragraph, list item and header 1 have this style*/
   color:  rgb(216, 221, 209);
   width: 600px;
   border: 1px solid black;
-  font-size: 10px;    
+  font-size: 12px;    
   line-height: 1;
   letter-spacing: 1px;
 }
