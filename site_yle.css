@@ -3,7 +3,7 @@ html {
   }
 
   body {
-    font-size: 10px;
+    font-size: 8px;
     width: 700px;
     margin: 0 auto;
     background-color: rgb(8, 2, 26);
@@ -13,7 +13,7 @@ html {
 
 h1 {
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     margin: 0;
     padding: 10px 0;    
     color: #00539F;
