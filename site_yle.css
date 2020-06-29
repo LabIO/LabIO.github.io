@@ -8,7 +8,7 @@ html {
     margin: 0 auto;
     background-color: rgb(8, 10, 110);
     padding: 0 10px 10px 10px;
-    border: 5px solid black;
+    border: 3px solid black;
   }
 
 h1 {
@@ -42,7 +42,7 @@ a:hover {
 }
 
 a:active {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 li {
