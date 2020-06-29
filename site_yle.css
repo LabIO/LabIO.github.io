@@ -4,9 +4,9 @@ html {
 
   body {
     font-size: 8px;
-    width: 800px;
+    width: 860px;
     margin: 0 auto;
-    background-color: rgb(8, 20, 130);
+    background-color: rgb(8, 10, 110);
     padding: 0 10px 10px 10px;
     border: 5px solid black;
   }
@@ -22,8 +22,8 @@ h1 {
 
 p, a { /* paragraph, list item and header 1 have this style*/
   color:  rgb(216, 221, 209);
-  width: 600px;
-  border: 1px solid black;
+  width: 760px;
+  border: 1px solid grey;
   font-size: 16px;    
   line-height: 1;
   letter-spacing: 1px;
