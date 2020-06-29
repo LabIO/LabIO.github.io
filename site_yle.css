@@ -23,7 +23,7 @@ h1 {
 p, a { /* paragraph, list item and header 1 have this style*/
   color:  rgb(216, 221, 209);
   width: 760px;
-  border: 0px solid grey;
+  border: 3px solid black;
   font-size: 16px;    
   line-height: 1;
   letter-spacing: 1px;
