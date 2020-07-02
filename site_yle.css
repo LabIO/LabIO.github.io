@@ -18,7 +18,39 @@ h1 {
     padding: 10px 0;    
     color: rgb(200, 200, 200);
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
-}  
+} 
+
+
+
+
+.tile_div a {
+    display: block;
+    float: left;
+    height: 50px;
+    width: 100px;
+    margin-right: 5px;
+    background-image: url(tetraedron.png);
+    background-color: #ccc;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.title_div a.last {
+    margin-right: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+
+
+
+
+
+
+
 
 p, a { /* paragraph, list item and header 1 have this style*/
   color:  rgb(216, 221, 209);
