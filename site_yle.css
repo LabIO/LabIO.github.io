@@ -29,8 +29,7 @@ h1 {
     height: 50px;
     width: 100px;
     margin-right: 5px;
-    background-image: url(tetraedron.png);
-    background-color: #ccc;
+    background-color: rgb(30, 30, 80);
     text-align: center;
     line-height: 50px;
     text-decoration: none;
