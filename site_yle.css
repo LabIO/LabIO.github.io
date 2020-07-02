@@ -4,7 +4,7 @@ html {
 
   body {
     font-size: 8px;
-    width: 860px;
+    width: 900px;
     margin: 0 auto;
     background-color: rgb(8, 10, 110);
     padding: 0 10px 10px 10px;
@@ -12,15 +12,13 @@ html {
   }
 
 h1 {
-    font-size: 20px;
+    font-size: 22px;
     text-align: left;
     margin: 0;
     padding: 10px 0;    
     color: rgb(200, 200, 200);
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
 } 
-
-
 
 
 .tile_div a {
@@ -44,18 +42,11 @@ h1 {
 }
 
 
-
-
-
-
-
-
-
 p, a { /* paragraph, list item and header 1 have this style*/
   color:  rgb(216, 221, 209);
   width: 760px;
   border: 0px solid black;
-  font-size: 16px;    
+  font-size: 18px;    
   line-height: 2;
   letter-spacing: 1px;
 }
