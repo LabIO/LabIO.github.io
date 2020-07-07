@@ -44,7 +44,7 @@ h1 {
 
 p, a { /* paragraph, list item and header 1 have this style*/
   color:  rgb(216, 221, 209);
-  width: 760px;
+  width: 860px;
   border: 0px solid black;
   font-size: 18px;    
   line-height: 2;
