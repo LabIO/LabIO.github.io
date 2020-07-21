@@ -5,6 +5,11 @@ let osc, playing, freq, amp, stroke_color;
 
 function setup() {
   let cnv = createCanvas(1000,800);
+  // resize the canvas to the window size
+  cnv.width = window.innerWidth;
+  cnv.style.width = window.innerWidth;
+  cnv.height = window.innerHeight;
+  cnv.style.height = window.innerHeight;
   cnv.mousePressed(playOscillator);
   //cnv.style.position = 'static';
   //cnv.style.z-index(-1);
@@ -25,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-   //background(10, 30, 150); // how to set the background in the background? the strokes are not visible!
+   //background(10, 30, 150); // how to put the background in the background? the strokes are not visible!
   freq = constrain(map(mouseX, 0, width, 100, 500), 100, 500);
   amp = constrain(map(mouseY, height, 0, 0, 1), 0, 1);
 
