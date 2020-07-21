@@ -5,7 +5,7 @@ let osc, playing, freq, amp, stroke_color;
 
 function setup() {
   //let cnv = createCanvas(window.innerWidth,window.innerHeight);
-  let cnv = createCanvas(1200,600);
+  let cnv = createCanvas(window.innerWidth,window.innerHeight);
   cnv.mousePressed(playOscillator);
   //cnv.style.position = 'static';
   //cnv.style.z-index(-1);
