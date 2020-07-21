@@ -1,3 +1,16 @@
 html {
     background-color: rgb(10, 30, 150);
   }
+
+.menu{
+    position: fixed;
+    bottom: 90%;
+    width: 70px;
+    height: 20px;/*height: auto;*/
+    margin-left: 405px;
+    border: 0px solid #d6d6d6;
+    z-index: 99;
+    padding: 0;
+    text-align: center;
+    background: yellow; 
+     }
