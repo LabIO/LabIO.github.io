@@ -4,7 +4,8 @@
 let osc, playing, freq, amp, stroke_color;
 
 function setup() {
-  let cnv = createCanvas(window.innerWidth,window.innerHeight);
+  //let cnv = createCanvas(window.innerWidth,window.innerHeight);
+  let cnv = createCanvas(1200,600);
   cnv.mousePressed(playOscillator);
   //cnv.style.position = 'static';
   //cnv.style.z-index(-1);
@@ -69,6 +70,6 @@ function playOscillator() {
 
 function mouseReleased() {
   // ramp amplitude to 0 over 2 seconds
-  osc.amp(0, 2);
+  osc.amp(0, 3);
   playing = false;
 }
