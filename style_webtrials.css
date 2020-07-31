@@ -4,7 +4,8 @@ html {
 
   body {
     font-size: 8px;
-    width: 900px;
+    width: 90%;
+    heigth: auto;
     margin: 0 auto;
     background-color: rgb(1,1,1);
     padding: 0 10px 10px 10px;
