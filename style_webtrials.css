@@ -1,0 +1,84 @@
+html {
+    background-color: rgb(10, 30, 150);
+  }
+
+  body {
+    font-size: 8px;
+    width: 900px;
+    margin: 0 auto;
+    background-color: rgb(8, 10, 110);
+    padding: 0 10px 10px 10px;
+    border: 1px solid black;
+  }
+
+h1 {
+    font-size: 22px;
+    text-align: left;
+    margin: 0;
+    padding: 10px 0;    
+    color: rgb(200, 200, 200);
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
+} 
+
+
+.tile_div a {
+    display: block;
+    float: left;
+    height: 50px;
+    width: 150px;
+    margin-right: 5px;
+    background-color: rgb(30, 30, 80);
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.title_div a.last {
+    margin-right: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+
+p, a { /* paragraph, list item and header 1 have this style*/
+  color:  rgb(216, 221, 209);
+  width: 860px;
+  border: 0px solid black;
+  font-size: 18px;    
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight:bold;
+    text-decoration:none;
+    border-bottom:1px solid #ccc;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+li {
+    color:  rgb(216, 221, 209); 
+    font-size: 22px;    
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+}y_le_
