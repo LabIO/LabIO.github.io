@@ -21,4 +21,10 @@ myHeight = document.body.clientHeight;
 }
 document.getElementById('This and That').style.height = (myHeight - 140) + 'px';
 }
+
+function move_right(obj, value) {
+    var x = document.getElementById('button_shadow' + obj.id);
+    x.style.left = x.offsetLeft + value + 'px';
+}
+
 </script>
