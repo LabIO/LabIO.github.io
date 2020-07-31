@@ -112,3 +112,42 @@ img:hover {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 
 }
+
+.block {
+    display: block;
+    height: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+.block img {
+    transition: all 1s ease-in-out 0s;
+    -moz-transition: all 1s ease-in-out 0s;
+    -webkit-transition: all 1s ease-in-out 0s;
+    -o-transition: all 1s ease-in-out 0s;
+}
+.block .block-caption {
+    background: rgba(0,0,0,0.6);
+    bottom: 0;
+    color: #fff;
+    display: table;
+    left: 0;
+    opacity: 0;
+    padding: 10px 0;
+    position: absolute;
+    transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    width: 640px;
+}
+.block:hover .block-caption {
+    opacity: 1;
+}
+.block:hover img {
+    transform: scale(1.5) rotateZ(-5deg);
+    -moz-transform: scale(1.5) rotateZ(-5deg);
+    -webkit-transform: scale(1.5) rotateZ(-5deg);
+    -o-transform: scale(1.5) rotateZ(-5deg);
+}
