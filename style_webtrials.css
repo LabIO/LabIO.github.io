@@ -79,9 +79,9 @@ li {
 
 img {
   display: block;
-  margin: 90%;
-  width: 0 auto;
-  height: auto;
+  margin: 10px;
+  width: 90%;
+  height: 0 auto;
 }
 
 img:hover {
