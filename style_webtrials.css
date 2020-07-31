@@ -82,3 +82,8 @@ img {
   width: 90%;
   height: auto;
 }
+
+img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
