@@ -18,7 +18,7 @@
     <img src="amor.jpg" width="200"
          height="80">
          <br>
-         AMAR É MORRER DE PAIXÃO<BR>
+         AMAR É MORRER DE PAIXÃO<br>
             disse alguem...
 
             <audio id="myAudio">
@@ -40,7 +40,27 @@
               } 
               </script>
               
-        
+        e outro disse "RABOLA BO CARAMBOLA"<br> 
+
+        <audio id="myAudio">
+            <source src="Gil Semedo Rabola bo Carambola.mp3" type="audio/mpeg">
+          </audio>
+          
+          <button onclick="playAudio()" type="button">da-lhe</button>
+          <button onclick="pauseAudio()" type="button">ui</button> 
+          
+          <script>
+          var x = document.getElementById("myAudio"); 
+          
+          function playAudio() { 
+            x.play(); 
+          } 
+          
+          function pauseAudio() { 
+            x.pause(); 
+          } 
+          </script>
+
 
 
     </p>
