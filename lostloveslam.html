@@ -10,7 +10,27 @@
   <body>
       
     <h1>lost love slam</h1>
-    
+
+    <audio id="myAudio">
+        <source src="sg_April.mp3" type="audio/mpeg">
+      </audio>
+      
+      <button onclick="playAudio()" type="button">som</button>
+      <button onclick="pauseAudio()" type="button">pausa</button> 
+      
+      <script>
+      var x = document.getElementById("myAudio"); 
+      
+      function playAudio() { 
+        x.play(); 
+      } 
+      
+      function pauseAudio() { 
+        x.pause(); 
+      } 
+      </script>
+      
+
     <p> <br>
     este é sobre amores a distãncia
 </br>
@@ -20,10 +40,10 @@
 <br> reencontrados
 </br>
 
-    </p>
-        
-    
+    </p>  
 
 
     </body>
+
+
   </html>
