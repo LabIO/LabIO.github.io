@@ -65,9 +65,9 @@ function playOscillator() {
 
   strokeWeight(10);
   point(mouseX,mouseY);
-  ctx.moveTo(mouseX_, mouseY_);
-  ctx.lineTo(mouseX, mouseY);
-  ctx.stroke();
+  //ctx.moveTo(mouseX_, mouseY_);
+  //ctx.lineTo(mouseX, mouseY);
+  //ctx.stroke();
   mouseX_ = mouseX;
   mouseY_ = mouseY;
 
