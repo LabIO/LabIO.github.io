@@ -15,7 +15,6 @@ function setup() {
   mouseY_ = window.innerHeight / 2;
   mouseY_ = window.innerWidth / 2;
 
-
 }
 
 function draw() {
