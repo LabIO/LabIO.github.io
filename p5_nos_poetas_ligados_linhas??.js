@@ -1,7 +1,7 @@
 // hack this to leave a point playing and slowly disappear any time you click in the 
 // canvas. To create like a star soundscape
 
-let osc, playing, freq, amp, stroke_color, som;
+let osc, playing, freq, amp, stroke_color, som, mouseX_, mouseY_, ctx;
 
 function setup() {
   //let cnv = createCanvas(window.innerWidth,window.innerHeight);
@@ -11,6 +11,9 @@ function setup() {
   //cnv.style.z-index(-1);
   // how to set the canvas in the background??
   osc = new p5.Oscillator('sine');
+  ctx = cnv.getContext("2d");
+  mouseY_ = window.innerHeight / 2;
+  mouseY_ = window.innerWidth / 2;
 
 }
 
@@ -62,6 +65,12 @@ function playOscillator() {
 
   strokeWeight(10);
   point(mouseX,mouseY);
+  //ctx.moveTo(mouseX_, mouseY_);
+  //ctx.lineTo(mouseX, mouseY);
+  //ctx.stroke();
+  mouseX_ = mouseX;
+  mouseY_ = mouseY;
+
 }
 
 function mouseReleased() {
