@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Station sonification</title>
+
+    <!-- LOAD Tone.js from unpkg -->
+    <script src="https://unpkg.com/tone"></script>
+
+    <script>
+      //function playNotes(nota_1, nota_2, nota_3) {
+        function playNotes(playArray) {
+        // Create synthesizers:
+        //Ajustar o Volume:
+        const gainNode = new Tone.Gain(0.2).toDestination();
+        const synth = new Tone.PolySynth().connect(gainNode);
+        // set the attributes across all the voices using 'set'
+        synth.set({
+          envelope: {
+            attack: 1,
+            decay: 0,
+            //sustain: 0.25,
+            release: 3,
+          },
+        });
+        // play a chord. Toca durante 4 segundos:
+        //synth.triggerAttackRelease([nota_1, nota_2, nota_3], 4);
+         synth.triggerAttackRelease(playArray, 4);
+      }
+
+     
+      // Vai bscar os dados; vê que notas tocar e manda tocar as notas
+      async function fetchDataAndPlayNotes() {
+        
+        // ler os checkboxes
+          const checkboxes = document.querySelectorAll(
+            'input[type="checkbox"]'
+          );
+          const states = [];
+          for (const checkbox of checkboxes) {
+            states.push(checkbox.checked);
+          }
+          //Mostra os estanos na consola
+          console.log(states);
+       
+        
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          if (data.feeds.length > 0) {
+            const entry = data.feeds[0];
+
+          //Procurar nas propreties do objecto por campos que começem com field
+           var keys = Object.keys(entry);
+           const fieldsArray = keys.filter(item => item.startsWith('field'));
+           const playArray = [];
+            
+            //console.log(obj);
+            
+            for (const campo in fieldsArray){
+           // const valor = entry.find(o => o.name === campo);              
+            playArray.push(entry[fieldsArray[campo]] * 10);
+           //playArray.push(Math.floor(Math.random() * 2000) + 500 );
+            console.log(entry[fieldsArray[campo]] * 10);           
+              
+           } 
+            console.log(playArray);
+            //console.log(typeof(entry));
+            // Manda tocar as notas
+            //playNotes(entry.field1 * 12, entry.field2 * 12, entry.field3);
+            playNotes(playArray);
+          }           
+          else {
+            console.error("No data found");
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Weather Station Latest Data:</h1>
+    <div id="data-container"></div>
+
+    <!-- Button placed here -->
+    <button onclick="fetchDataAndPlayNotes()">
+      Click me to SONIFY fetched data!
+    </button>
+
+    <script>
+      const apiUrl =
+        //"https://thingspeak.mathworks.com/channels/2699354/feeds.json?api_key=BO9TGZUNE5THMK4W&results=1";
+      
+    //"https://api.thingspeak.com/channels/2699354/feeds.json?api_key=956JQOA0QHD13XG2&results=1";
+//"https://api.thingspeak.com/channels/2699354/feeds.json?&results=1";
+    "https://api.thingspeak.com/channels/12397/feeds.json?&results=1";
+
+      async function fetchData() {
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          displayData(data);
+        } catch (error) {
+          console.error(error);
+          document.getElementById("data-container").innerHTML =
+            "Error fetching data";
+        }
+      }
+      function displayData(data) {
+        const container = document.getElementById("data-container");
+        container.innerHTML = "";
+
+        for (const entry of data.feeds) {
+          const entryElement = document.createElement("div");
+          entryElement.classList.add("data-entry");
+          
+          //Penso que o ideal será que isto seja uma função 
+
+          const checkbox1 = document.createElement("input");
+          checkbox1.type = "checkbox";
+          checkbox1.id = "checkbox1";
+          checkbox1.checked = true;
+          checkbox1.classList.add("station-checkbox");
+
+          const field1 = document.createElement("p");
+          field1.textContent = `Temperature: ${entry.field1}`;
+          entryElement.appendChild(field1);
+          field1.appendChild(checkbox1);
+
+          const checkbox2 = document.createElement("input");
+          checkbox2.type = "checkbox";
+          checkbox2.id = "checkbox2";
+          checkbox2.checked = true;
+          checkbox2.classList.add("station-checkbox");
+
+          const field2 = document.createElement("p");
+          field2.textContent = `Humidity 2: ${entry.field2}`;
+          entryElement.appendChild(field2);
+          field2.appendChild(checkbox2);
+
+          const checkbox3 = document.createElement("input");
+          checkbox3.type = "checkbox";
+          checkbox3.id = "checkbox3";
+          checkbox3.checked = true;
+          checkbox3.classList.add("station-checkbox");
+
+          const field3 = document.createElement("p");
+          field3.textContent = `Station 3: ${entry.field3}`;
+          entryElement.appendChild(field3);
+          field3.appendChild(checkbox3);
+
+          container.appendChild(entryElement);
+        }
+      }
+
+      fetchData();
+    </script>
+    <p></p>
+    <p>
+      <h2>
+        Sonification of wheather stations data
+    </h2>
+Mapping protocol: Each weather station is assigned an oscilator. The latest temperature data in °C is converted to to the speed of the oscilator in Hz.
+    </p>
+  </body>
+</html>
